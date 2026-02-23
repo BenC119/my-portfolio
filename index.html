@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nguyen Xuan Sang</title>
+    <style>
+        /* CSS Reset & General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Header */
+        header { text-align: center; margin-bottom: 50px; }
+        header h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        header p { color: #3498db; font-weight: 600; font-size: 1.1rem; }
+
+        /* Section chung */
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        h2 { border-left: 5px solid #3498db; padding-left: 15px; margin-bottom: 20px; color: #2c3e50; }
+
+        /* Kỹ năng - Flexbox */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #e8f4fd; color: #3498db; padding: 8px 15px; border-radius: 20px; font-weight: 500; font-size: 0.9rem; border: 1px solid #d0e9fb; }
+
+        /* Dự án */
+        .project-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .project-item:last-child { border-bottom: none; }
+        .project-title { font-weight: bold; color: #2980b9; font-size: 1.25rem; margin-bottom: 8px; display: flex; align-items: center; }
+        .project-title::before { content: "🚀"; margin-right: 10px; font-size: 1rem; }
+        .project-desc { font-size: 0.95rem; color: #555; }
+        .project-tech { font-style: italic; color: #7f8c8d; font-size: 0.85rem; margin-top: 5px; display: block; }
+
+        /* Contact & Button */
+        .contact-zone { text-align: center; padding: 40px 0; }
+        .btn-reveal { background: #3498db; color: white; border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: 0.3s; font-size: 1rem; font-weight: bold; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); }
+        .btn-reveal:hover { background: #2980b9; transform: translateY(-2px); }
+        #info-email { display: none; margin-top: 15px; font-weight: bold; color: #e67e22; text-decoration: none; font-size: 1.2rem; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Nguyen Xuan Sang</h1>
+        <p>Web Development Fresher</p>
+    </header>
+
+    <section id="about">
+        <h2>Giới thiệu</h2>
+        <p>Em không quá nhanh nhẹn nhưng em sẽ cố gắng để hoàn thành tốt công việc ạ.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Kỹ năng hiện có</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">HTML5 & CSS3 (Cơ bản)</span>
+            <span class="skill-tag">JavaScript (Cơ bản)</span>
+            <span class="skill-tag">Tư duy lập trình (C++, Java)</span>
+            <span class="skill-tag">Lập trình Game (Unity & C#)</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Các dự án & Bài tập tiêu biểu</h2>
+        
+        <div class="project-item">
+            <div class="project-title">Trang Web Hóa Đơn Điện Tử</div>
+            
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Cổng thông tin "Tìm kiếm thú cưng"</div>
+           
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Web Chia sẻ Công thức Nấu ăn</div>
+            
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Game Development (Unity)</div>
+        </div>
+    </section>
+
+    <section class="contact-zone">
+        <h2>Kết nối với em</h2>
+        <p style="margin-bottom: 20px; color: #7f8c8d;">Em luôn sẵn sàng cho những cơ hội học hỏi và thử thách mới!</p>
+        <button class="btn-reveal" onclick="showEmail()">Click để xem Email của em</button>
+        <br>
+        <a href="" id="info-email"></a>
+    </section>
+</div>
+
+<script>
+    function showEmail() {
+        let emailElement = document.getElementById("info-email");
+        let btn = document.querySelector(".btn-reveal");
+        
+        // Email của bạn sẽ hiện ra một cách chuyên nghiệp
+        emailElement.innerText = "xuansang.dev@gmail.com"; 
+        emailElement.href = "mailto:xuansang.dev@gmail.com";
+        emailElement.style.display = "inline-block";
+        
+        btn.style.display = "none"; 
+    }
+</script>
+
+</body>
+</html>
